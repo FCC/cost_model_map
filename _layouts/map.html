@@ -9,18 +9,20 @@
 <div id="map-c" class="container">
   <div class="content">
     <section id="map-legend">
-      <section class="col">
-        <dl class="dl-statTract dl-inline">
-          <dt>Locations Unserved<sup>1</sup> </dt>
-          <dd><span id="stat-totloc">----</span></dd>
-          <dt>Total Annual Support</dt>
-          <dd>$ <span id="stat-totsup">----</span></dd>
-          <dt>Price cap</dt>
-          <dd>$ <span id="stat-pcannsup">----</span></dd>
-          <dt>Rate-of-return</dt>
-          <dd>$ <span id="stat-rorannsup">----</span></dd>
-        </dl>
-      </section> 
+      <ul>
+        <li>Selected Tract<br />        
+          <span id="stat-tract">123456</span><br>
+          <span id="stat-cnty">------</span> County, <span id="stat-state">--</span>
+        </li>
+        <li>Locations Unserved<sup>1</sup><br />
+        <span id="stat-totloc">----</span></li>
+        <li>Total Annual Support<br />
+        $ <span id="stat-totsup">----</span></li>
+        <li>Price cap<br />
+        $ <span id="stat-pcannsup">----</span></li>
+        <li>Rate-of-return<br />
+        $ <span id="stat-rorannsup">----</span></li>
+      </ul>
       <table class="table table-legend table-data">
         <caption>Model Landscape</caption>
         <thead>
@@ -32,7 +34,7 @@
         </thead>
         <tfoot>
           <tr>
-            <td colspan=3><sup>1</sup>This map only shows Price-Cap areas.</td>
+            <td colspan=3><sup>1</sup> This map only shows Price-Cap areas.</td>
           </tr>
         </tfoot>
         <tbody>
