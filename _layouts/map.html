@@ -8,6 +8,43 @@
 
 <div id="map-c" class="container">
   <div class="content">
+    <section id="map-legend">   
+      <table class="table table-legend table-data">
+        <caption>Model Landscape</caption>
+        <thead>
+          <tr>
+            <th>Cost per location</th>
+            <th>Served<sup>1</sup></th>
+            <th>Unserved<sup>1</sup></th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan=3><sup>1</sup>This map only shows Price-Cap areas.</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td style="white-space: nowrap;"><strong>Above</strong> <br>
+                Price cap: &ge; $207.81</td>
+            <td><span class="key-symbol" style="color:#FFACA1">▉</span></td>
+            <td><span class="key-symbol" style="color:#DC4E3D">▉</span></td>
+          </tr>
+          <tr>
+            <td style="white-space: nowrap;"><strong>Between</strong> <br>
+                Price cap: &gt; $52.50 and &lt; $207.81</td>
+            <td><span class="key-symbol" style="color:#C4F489">▉</span></td>
+            <td><span class="key-symbol" style="color:#28925B">▉</span></td>
+          </tr>
+          <tr>
+            <td style="white-space: nowrap;"><strong>Below</strong> <br>
+                Price cap: &le; $52.50</td>
+            <td><span class="key-symbol" style="color:#FBDA62">▉</span></td>
+            <td><span class="key-symbol" style="color:#D99442">▉</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
     <div id="map"></div>
     <!-- <ul class="inline">
       <li><strong>Select Map:</strong></li>
@@ -17,49 +54,9 @@
   </div>
 </div>
 
-  <div class="content">
-    <section id="map-legend">   
-      <table class="table table-legend table-data">
-        <caption>
-        Model Landscape
-        </caption>
-        <thead>
-            <tr>
-                <th>Cost per location</th>
-                <th>Served<sup>1</sup></th>
-                <th>Unserved<sup>1</sup></th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <td colspan=3><sup>1</sup>This map only shows Price-Cap areas.</td>
-            </tr>
-        </tfoot>
-        <tbody>
-            <tr>
-                <td style="white-space: nowrap;"><strong>Above</strong> <br>
-                    Price cap: &ge; $207.81</td>
-                <td><span class="key-symbol" style="color:#FFACA1">▉</span></td>
-                <td><span class="key-symbol" style="color:#DC4E3D">▉</span></td>
-            </tr>
-            <tr>
-                <td style="white-space: nowrap;"><strong>Between</strong> <br>
-                    Price cap: &gt; $52.50 and &lt; $207.81</td>
-                <td><span class="key-symbol" style="color:#C4F489">▉</span></td>
-                <td><span class="key-symbol" style="color:#28925B">▉</span></td>
-            </tr>
-            <tr>
-                <td style="white-space: nowrap;"><strong>Below</strong> <br>
-                    Price cap: &le; $52.50</td>
-                <td><span class="key-symbol" style="color:#FBDA62">▉</span></td>
-                <td><span class="key-symbol" style="color:#D99442">▉</span></td>
-            </tr>
-        </tbody>
-    </table>
-    </section>
-
-    {{ content }}    
-  </div>
+<div class="content">
+  {{ content }}    
+</div>
 
    
 <script>

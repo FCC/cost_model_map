@@ -237,9 +237,22 @@ figure.large img {
 }
 
 #map {
+  border-radius: 2px;
   background-color: #dddddd;
   height: 200px;
   margin-bottom: 20px;
+}
+#map-legend {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px #999;
+  height: 680px;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 400px;
+  z-index: 1000;
 }
 #map-legend span {
   display: block;
@@ -434,7 +447,7 @@ th {
 }
 @media (min-width: 800px) {
   #map, figure.large, table.large  {
-    height: 400px;
+    height: 700px;
     margin:  0 auto;
     max-width: 100%;
     width: 100%;
