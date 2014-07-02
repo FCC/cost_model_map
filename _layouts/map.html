@@ -6,8 +6,9 @@
   </div>
 </div>
 
-<div id="map-c" class="container">
-  <div class="content">
+<div id="map-c" style="position: relative;">
+  <div id="map"></div>
+  <!--<div class="content">-->
     <section id="map-legend">
       <ul>
         <li>Selected Tract<br />        
@@ -23,6 +24,8 @@
         <li>Rate-of-return<br />
         $ <span id="stat-rorannsup">----</span></li>
       </ul>
+    </section>
+    <section id="map-legend-2">
       <table class="table table-legend table-data">
         <caption>Model Landscape</caption>
         <thead>
@@ -59,13 +62,12 @@
         </tbody>
       </table>
     </section>
-    <div id="map"></div>
     <!-- <ul class="inline">
       <li><strong>Select Map:</strong></li>
       <li><a href='javascript:void(0)' id='cam411' class='sel active'>CAM v4.1.1 map</a></li>
       <li><a href='javascript:void(0)' id='cam411_10_768' class='sel inactive'>CAM v4.1.1 map 10/768</a></li>
     </ul> -->
-  </div>
+  <!--</div>-->
 </div>
 
 <div class="content">
@@ -75,15 +77,14 @@
    
 <script>
 var map = L.mapbox.map('map', 'fcc.map-kzt95hy6', {attributionControl: false,maxZoom:10})
-            .setView([38.82, -94.96], 4);
+            .setView([38.82, -94.96], 5);
 map.scrollWheelZoom.disable();
 
 var hash = L.hash(map);
 L.control.fullscreen().addTo(map);
 var activeLayerGroup = new L.LayerGroup();
 var cam411_TL = L.mapbox.tileLayer('fcc.h9d1v2t9')
-                    .on('load',function(){/* REMOVE LEGEND  map.legendControl.addLegend(cam411_TL.getTileJSON().legend);*/
-                                        cam411_TL.removeEventListener();})
+                    .on('load',function(){ cam411_TL.removeEventListener();})
 var cam411_GL = L.mapbox.gridLayer('fcc.h9d1v2t9')
 var cam411_GC = L.mapbox.gridControl(cam411_GL, {follow: true})//.addTo(map);
 var tileName = "cam411";

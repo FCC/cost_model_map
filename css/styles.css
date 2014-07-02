@@ -15,7 +15,7 @@ body {
   font-size: 16px;
   height: 100%;
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
 }
 a:link {
   color: #55A3CA;
@@ -158,7 +158,7 @@ dl {
 }
 #map-legend li {
   border-bottom: 1px solid #ddd;
-  padding: 5px;
+  padding: 5px 20px;
 }
 dd {
   color: #212326;
@@ -254,16 +254,27 @@ figure.large img {
 #map-legend {
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 1px 2px #999;
-  height: 680px;
-  position: absolute;
+  box-shadow: 0 1px 2px #555;
+  font-size: 14px;
+  /*position: absolute;*/
   right: 10px;
   top: 10px;
-  width: 400px;
+  width: 350px;
+  z-index: 1000;
+}
+#map-legend-2 {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #555;
+  /*position: absolute;*/
+  right: 10px;
+  bottom: 10px;
+  width: 350px;
   z-index: 1000;
 }
 #map-legend table {
-  margin: 10px;
+  margin: 40px auto 0;
+  width: 360px;
 }
 /*#map-legend span {
   display: block;
@@ -455,7 +466,7 @@ th {
 @media (min-width: 800px) {
   #map, figure.large, table.large  {
     height: 700px;
-    margin:  0 auto;
+    margin: 10px auto 0;
     max-width: 100%;
     width: 100%;
   }
