@@ -17,11 +17,7 @@
 <div class="container {% if page.frame == 'frame' %}frame{% endif %}">
   <div class="group">
     <div class="col col-7">
-	  <div id="search"><input type="text" name="geo-loc" id="geo-loc" size="43" value="" maxlength="60" placeholder="Enter Location"></div>
-      
-      <div class="map-container">
-      <button id="btn-geoLocation" class="btn-geoLocation" type="button" title="Get Current Location"><span class="icon-locate-1"></span></button>
-      <div id="map"></div></div>
+      <div id="map"></div>
     </div>
     <div class="col col-3">
       {% include data.html %}
