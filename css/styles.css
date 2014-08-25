@@ -16,17 +16,17 @@ body {
   font-size: 16px;
   height: 100%;
   margin: 0;
-  padding: 40px 10px 0;
+  padding: 50px 10px 0;
 }
 a:link {
-  color: #337b94;
+  color: #55A3CA;
   text-decoration: none;
 }
 a:visited {
-  color:#337b94;
+  color:#6824E5;
 }
 a:hover {
-  color:#337b94 /* #E7A024*/;
+  color:#E53724 /* #E7A024*/;
   text-decoration: underline;
 }
 
@@ -59,7 +59,7 @@ p {
   color: #51545B;
   font-weight: normal;
   line-height: 1.4;
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 }
 
 #help-text {
@@ -125,15 +125,15 @@ hr {
 }
 @media only screen and (min-width: 1024px) {
   hr {
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
 }
 hr.small {
   border-top-style: dotted;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  width: 100px;
 }
 
 .container {
@@ -179,21 +179,15 @@ hr.small {
   width: 25%;
 }
 
-.map-container {
-    position: relative;
-}
-
 #map {
   background-color: #dddddd;
-  height: 360px;
-  margin: 0 0 20px 0;
+  height: 400px;
+  margin: 0 auto 20px auto;
   max-width: 100%;
-  padding: 0;
-  vertical-align: top;
 }
 @media (min-width: 800px) {
   #map {
-    height: 575px;
+    height: 700px;
     max-width: 100%;
     width: 100%;
   }
@@ -227,7 +221,7 @@ table {
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
-  margin: 5px 0;
+  margin: 20px 0;
 }
 .map-legend .table {
   margin: 0 auto;
@@ -247,7 +241,7 @@ table {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
   color: #212326;
-  padding: 4px;
+  padding: 5px;
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
@@ -284,7 +278,7 @@ table {
 }
 .table-bordered {
   border: 1px solid #ddd;
-  margin: 25px 0;
+  margin: 40px 0;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -297,57 +291,4 @@ table {
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
-}
-.pointer {
-	cursor: pointer;
-}
-#download-geo {
-	font-size: 12px;
-	display:none;
-}
-#download-table {
-	width: 100%;
-}
-#download-table tr td {
-	font-size: 12px; 
-	font-weight: bold;
-	width: 50%;
-}
-#download-table tr td select{
-	font-size: 11px; 
-}
-#search {
-	width: 100%;
-}
-#search input {
-	width: 100%;
-	border: 1px solid #ddd !important;
-	font-weight: 400;
-	font-size: 16px;
-	height: 36px;
-	padding: 6px 12px;
-	color: #444;
-}
-#search input:focus {	
-	border: 1px solid #999 !important;
-	outline: none;
-}
-.btn-geoLocation, .btn-geoLocation:hover {
-	border: 1px solid #CCC;
-    border-bottom: none;
-	border-radius: 2px;
-	left: 10px;
-	top: 113px;
-	padding: 4px;
-	position: absolute;
-	cursor: pointer;
-	z-index: 9;
-	width: 28px;
-	height: 28px;
-	overflow: hidden;
-	background-image:url('icon-showMarker.png');
-	background-color: #ffffff;
-	background-position:center;
-	background-repeat:no-repeat;
-	outline: none;
 }
