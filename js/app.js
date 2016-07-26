@@ -92,13 +92,13 @@ $(document).ready(function () {
 		if ((output_format != '') && ($.isNumeric(tract_fips))) {			
 			
 			if (output_format == 'kml') {
-				window.open('http://www.broadbandmap.gov/geoserver/gis_swat/wms?service=WMS&version=1.1.0&request=GetMap&layers=gis_swat:caf2_geom&styles=&bbox=-180.0,-90.0,180.0,90.0&width=500&height=500&srs=EPSG:4326&format=kml&cql_filter='+ cql_filter);
+				window.open('https://geo.fcc.gov/geoserver/fcc/wms?service=WMS&version=1.1.0&request=GetMap&layers=fcc:caf2_geom&styles=&bbox=-180.0,-90.0,180.0,90.0&width=500&height=500&srs=EPSG:4326&format=kml&cql_filter='+ cql_filter);
 			}
 			else if (output_format == 'json') {
-				window.open('http://www.broadbandmap.gov/geoserver/gis_swat/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=gis_swat:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter, '_blank');
+				window.open('https://geo.fcc.gov/geoserver/fcc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=fcc:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter, '_blank');
 			} 
 			else {
-				window.open('http://www.broadbandmap.gov/geoserver/gis_swat/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=gis_swat:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter);
+				window.open('https://geo.fcc.gov/geoserver/fcc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=fcc:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter);
 			}		
 			
 			$('#download-county option[value=""]').prop('selected', true);
