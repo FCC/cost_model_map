@@ -83,7 +83,7 @@ $(document).ready(function () {
 			file_name = '' + tract_fips +'.'+ output_format;
 		}
 		else if (download_type == 'download-county') {
-			cql_filter = 'county_fips=%27'+ county_fips +'%27';
+			cql_filter = 'county_fip=%27'+ county_fips +'%27';
 			file_name = '' + county_fips +'.'+ output_format;
 		}
 		//alert('cql_filter : ' + cql_filter );		
@@ -92,13 +92,13 @@ $(document).ready(function () {
 		if ((output_format != '') && ($.isNumeric(tract_fips))) {			
 			
 			if (output_format == 'kml') {
-				window.open('https://geo.fcc.gov/geoserver/fcc/wms?service=WMS&version=1.1.0&request=GetMap&layers=fcc:caf2_geom&styles=&bbox=-180.0,-90.0,180.0,90.0&width=500&height=500&srs=EPSG:4326&format=kml&cql_filter='+ cql_filter);
+				window.open('https://geo.fcc.gov/fcc/wms?service=WMS&version=1.1.0&request=GetMap&layers=fcc:caf2_geom&styles=&bbox=-180.0,-90.0,180.0,90.0&width=500&height=500&srs=EPSG:4326&format=kml&cql_filter='+ cql_filter);
 			}
 			else if (output_format == 'json') {
-				window.open('https://geo.fcc.gov/geoserver/fcc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=fcc:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter, '_blank');
+				window.open('https://geo.fcc.gov/fcc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=fcc:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter, '_blank');
 			} 
 			else {
-				window.open('https://geo.fcc.gov/geoserver/fcc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=fcc:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter);
+				window.open('https://geo.fcc.gov/fcc/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=fcc:caf2_geom&outputFormat='+ output_format +'&cql_filter='+ cql_filter);
 			}		
 			
 			$('#download-county option[value=""]').prop('selected', true);
