@@ -2,7 +2,7 @@ var map;
 var geocoder;
 
 $(document).ready(function () {
-	
+	L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
 	map = L.mapbox.map('map', 'fcc.map-kzt95hy6,fcc.pj3mobt9', { attributionControl: false,gridControl: false, maxZoom:10 })
             .setView([38.82, -94.96], 4);
 	map.scrollWheelZoom.disable();
@@ -12,14 +12,14 @@ $(document).ready(function () {
 	L.control.fullscreen().addTo(map);
 	var activeLayerGroup = new L.LayerGroup();
 	var cam411_TL = L.mapbox.tileLayer('fcc.h9d1v2t9')
-					  .on('load',function(){ cam411_TL.removeEventListener(); })
+					  .on('load',function(){ cam411_TL.removeEventListener(); });
 	var cam411_GL = L.mapbox.gridLayer('fcc.h9d1v2t9');
 	var cam411_GC = L.mapbox.gridControl(cam411_GL, { follow: true });
 	var tileName = "cam411";
 
 	activeLayerGroup.addLayer(cam411_TL);
 	activeLayerGroup.addLayer(cam411_GL);
-	activeLayerGroup.addLayer(cam411_GC);
+	map.addControl(cam411_GC);
 	activeLayerGroup.addTo(map);
 
 	var cam411_10_768_TL = L.mapbox.tileLayer('fcc.hjl40a4i');
@@ -106,7 +106,7 @@ $(document).ready(function () {
 		}
 	}); 	
 	
-	geocoder = L.mapbox.geocoder('fcc.map-kzt95hy6');	
+	geocoder = L.mapbox.geocoder('mapbox.places');	
 		
 	$('#geo-loc').change(function () {
 		geoCode($(this).val());
