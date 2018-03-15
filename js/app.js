@@ -2,7 +2,7 @@ var map;
 var geocoder;
 
 $(document).ready(function () {
-	L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+	L.mapbox.accessToken = 'pk.eyJ1IjoiZmNjIiwiYSI6InBiaGMyLU0ifQ.LOmVYpUCFv2yWpbvxDdQNg';
 	map = L.mapbox.map('map', 'fcc.map-kzt95hy6,fcc.pj3mobt9', { attributionControl: false,gridControl: false, maxZoom:10 })
             .setView([38.82, -94.96], 4);
 	map.scrollWheelZoom.disable();
